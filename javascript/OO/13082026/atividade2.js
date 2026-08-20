@@ -53,7 +53,6 @@ const botaoExcluir = document.querySelector("#botaoExcluir")
 
 botaoCadastrar.addEventListener("click", function () {
     const produto = new Produto(nome.value, preco.value, categoria.value, desconto.value)
-
     mercadorias.adicionarProduto(produto);
     mercadorias.exibir();
 })
