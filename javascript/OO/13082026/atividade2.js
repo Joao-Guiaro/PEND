@@ -25,17 +25,22 @@ class Mercadorias {
 
         resultado.innerHTML = "";
 
-        this.produtos.forEach( produto => {
+        this.produtos.forEach((produto, position) => {
             resultado.innerHTML += `
                 <div>
                     <p>Nome: ${produto.nome}</p>
                     <p>Preço: ${produto.aplicarDesconto()}</p>
                     <p>Categoria: ${produto.categoria}</p>
-                    <p>Desconto: ${produto.desconto}</p>
+                    <p>Desconto: ${produto.desconto}</p><br><br>
+                    <button onclick="mercadorias.excluir(${position})">Excluir</button>
                 </div><br>
                 `;
         })
 
+    }
+    excluir(position){
+        this.produtos.splice(position, 1);
+        this.exibir();
     }
 }
 const mercadorias = new Mercadorias();
@@ -44,6 +49,7 @@ const preco = document.querySelector("#preco");
 const categoria = document.querySelector("#categoria");
 const desconto = document.querySelector("#desconto");
 const botaoCadastrar = document.querySelector("#botaoCadastrar");
+const botaoExcluir = document.querySelector("#botaoExcluir")
 
 botaoCadastrar.addEventListener("click", function () {
     const produto = new Produto(nome.value, preco.value, categoria.value, desconto.value)
