@@ -13,10 +13,12 @@ class Produto {
 }
 class Mercadorias {
     constructor() {
-        this.produtos = []
+        this.produtos = [];
+        this.recuperarLocal();
     }
     adicionarProduto(produto) {
         this.produtos.push(produto);
+        this.adicionarLocal();
     }
 
     exibir() {
@@ -38,9 +40,31 @@ class Mercadorias {
         })
 
     }
-    excluir(position){
+    excluir(position) {
         this.produtos.splice(position, 1);
+        this.adicionarLocal();
         this.exibir();
+    }
+    adicionarLocal() {
+        localStorage.setItem("produtos", JSON.stringify(this.produtos));
+    }
+    recuperarLocal() {
+        const dados = localStorage.getItem("produtos");
+
+        if (dados) {
+            const produtoSalvo = JSON.parse(dados);
+
+            this.produtos = produtoSalvo.map(produto => {
+                return new Produto(
+                    produto.nome,
+                    produto.preco,
+                    produto.categoria,
+                    produto.desconto,
+                );
+            }
+
+            );
+        }
     }
 }
 const mercadorias = new Mercadorias();
@@ -52,7 +76,8 @@ const botaoCadastrar = document.querySelector("#botaoCadastrar");
 const botaoExcluir = document.querySelector("#botaoExcluir")
 
 botaoCadastrar.addEventListener("click", function () {
-    const produto = new Produto(nome.value, preco.value, categoria.value, desconto.value)
+    const produto = new Produto(nome.value, preco.value, categoria.value, desconto.value);
     mercadorias.adicionarProduto(produto);
     mercadorias.exibir();
 })
+mercadorias.exibir();

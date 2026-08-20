@@ -21,6 +21,7 @@ class Produto{
         </div>
         `;
     }
+
 }
 
 const nome = document.querySelector("#nome");
