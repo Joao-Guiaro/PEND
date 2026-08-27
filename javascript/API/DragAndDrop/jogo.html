@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pênalti</title>
+    <link rel="stylesheet" href="jogo.css">
+</head>
+<body>
+    <div id="campo">
+        <div id="gol">
+            <div id="goleiro">
+                <img src="neuer.svg" alt="goleiro" style="width: 290px;">
+            </div>
+ 
+            <div class="zona" data-zona="0"></div>
+            <div class="zona" data-zona="1"></div>
+            <div class="zona" data-zona="2"></div>
+        </div>
+ 
+        <div id="area-bola">
+            <div id="bola" draggable="true">
+                <img src="Design sem nome (2).svg" height="40px" alt="">
+            </div>
+        </div>
+ 
+        <div id="mensagem"></div>
+ 
+        <div id="placar">
+            Gols: <span id="gols">0</span> &nbsp;|&nbsp; Defesas: <span id="defesas">0</span>
+        </div>
+ 
+    </div>
+ 
+    <script src="jogo.js"></script>
+</body>
+</html>
+ 
