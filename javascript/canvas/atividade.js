@@ -1,0 +1,23 @@
+const canvas = document.querySelector("#canvas");
+const ctx = canvas.getContext("2d");
+
+ctx.beginPath();
+ctx.arc(270, 100, 30, 0, Math.PI * 2);
+ctx.stroke();
+ctx.moveTo(265, 130);
+ctx.lineTo(265, 205);
+ctx.lineTo(300, 240);
+ctx.lineTo(300, 290);
+ctx.moveTo(265, 205);
+ctx.lineTo(230, 240);
+ctx.lineTo(230, 290);
+ctx.moveTo(265, 130);
+ctx.lineTo(290, 170);
+ctx.lineTo(325, 130);
+ctx.moveTo(265, 130);
+ctx.lineTo(240, 170);
+ctx.lineTo(275, 185);
+ctx.lineWidth = 8;
+ctx.lineCap = "round";
+ctx.lineJoin = "round";
+ctx.stroke();
