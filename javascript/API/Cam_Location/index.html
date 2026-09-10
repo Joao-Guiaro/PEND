@@ -5,53 +5,34 @@
     <title>Localização e Câmera</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
     <div class="container">
-
         <h1>Minha Localização</h1>
-
-        <video id="camera" autoplay playinline></video>
-
-
+        <video id="camera" autoplay ></video>
         <div id="locationGood" class="card sucesso" style="display:none;">
             Localização encontrada!
         </div>
-
-
         <div id="locationBad" class="card erro" style="display:none;">
             Não foi possível obter localização.
         </div>
-
-
         <div class="dados">
-
             <p>
                 Latitude:
                 <span id="latitude"></span>
             </p>
-
-
             <p>
                 Longitude:
                 <span id="longitude"></span>
             </p>
-
-
             <p>
                 Precisão:
                 <span id="accuracy"></span> metros
             </p>
-
         </div>
-
-
+        <canvas id="canvas" style="display: none;"></canvas><br>
+        <button id="botao">Tirar Foto</button><br><br>
+        <img id="foto"><br>
     </div>
-
-
 <script src="script.js"></script>
-
 </body>
-
 </html>
