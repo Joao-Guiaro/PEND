@@ -166,10 +166,11 @@ function mostrarNoticias(noticias) {
 
             </a>
 
-
-            <h2>
-                ${noticia.title}
-            </h2>
+            <a href="${noticia.url}" target="_blank">
+                <h2>
+                    ${noticia.title}
+                </h2>
+            </a>
 
 
             <p>
