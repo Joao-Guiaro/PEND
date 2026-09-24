@@ -1,0 +1,241 @@
+/* ============================= */
+/* CONFIGURAÇÕES GERAIS */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Burbank", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0b0614, #1b0b2e, #2b0f4f);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 60px 20px;
+}
+
+/* ============================= */
+/* TÍTULO */
+/* ============================= */
+
+body::before {
+    content: "FORTNITE ITEMS";
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: 3px;
+
+    color: #ffffff;
+    text-shadow:
+        0 0 10px #9d4edd,
+        0 0 25px #7b2cbf,
+        0 0 45px #5a189a;
+
+    margin-bottom: 40px;
+}
+
+/* ============================= */
+/* INPUT */
+/* ============================= */
+
+#idUsuario {
+    width: 350px;
+    padding: 15px 18px;
+
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+
+    border: 2px solid #7b2cbf;
+    border-radius: 12px;
+
+    outline: none;
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+#idUsuario::placeholder {
+    color: #c9b6d9;
+}
+
+#idUsuario:focus {
+    border-color: #c77dff;
+
+    box-shadow:
+        0 0 10px #9d4edd,
+        0 0 25px rgba(157, 78, 221, 0.5);
+}
+
+/* ============================= */
+/* BOTÃO */
+/* ============================= */
+
+#buscarUsuarios {
+    margin-top: 15px;
+
+    padding: 14px 30px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #7b2cbf,
+        #9d4edd
+    );
+
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px rgba(123, 44, 191, 0.5);
+
+    transition: 0.3s;
+}
+
+#buscarUsuarios:hover {
+    transform: translateY(-3px);
+
+    background: linear-gradient(
+        135deg,
+        #9d4edd,
+        #c77dff
+    );
+
+    box-shadow:
+        0 8px 25px rgba(157, 78, 221, 0.7);
+}
+
+#buscarUsuarios:active {
+    transform: scale(0.96);
+}
+
+/* ============================= */
+/* ÁREA DO RESULTADO */
+/* ============================= */
+
+#resultado {
+    width: 400px;
+    margin-top: 40px;
+
+    padding: 25px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(199, 125, 255, 0.4);
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.4),
+        0 0 25px rgba(123, 44, 191, 0.2);
+
+    backdrop-filter: blur(10px);
+}
+
+/* ============================= */
+/* NOME DO ITEM */
+/* ============================= */
+
+#resultado strong {
+    display: block;
+
+    font-size: 25px;
+    margin-bottom: 15px;
+
+    color: #e0aaff;
+
+    text-shadow:
+        0 0 10px #9d4edd;
+}
+
+/* ============================= */
+/* INFORMAÇÕES */
+/* ============================= */
+
+#resultado p {
+    line-height: 1.8;
+    color: #e6d9ef;
+}
+
+/* ============================= */
+/* IMAGEM DA SKIN */
+/* ============================= */
+
+#resultado img {
+    display: block;
+
+    width: 200px;
+
+    margin: 20px auto 5px;
+
+    border-radius: 15px;
+
+    border: 2px solid #9d4edd;
+
+    box-shadow:
+        0 0 15px rgba(157, 78, 221, 0.6);
+
+    transition: 0.3s;
+}
+
+#resultado img:hover {
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 30px rgba(199, 125, 255, 0.8);
+}
+
+/* ============================= */
+/* LINHA */
+/* ============================= */
+
+#resultado hr {
+    border: none;
+
+    height: 1px;
+
+    margin-top: 25px;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        #9d4edd,
+        transparent
+    );
+}
+
+/* ============================= */
+/* RESPONSIVIDADE */
+/* ============================= */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 40px 15px;
+    }
+
+    body::before {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #idUsuario {
+        width: 100%;
+    }
+
+    #resultado {
+        width: 100%;
+    }
+}
