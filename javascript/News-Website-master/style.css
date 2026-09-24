@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Pliant:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    font-family: "Pliant", sans-serif ;
+    color: white;
+}
+
+
+body {
+    margin: 0;
+    background-color:#f5f5f5;
+}
+
+h2, p{
+   color: black;
+}
+
+.topo {
+    background-color: rgb(150, 0, 0);
+    padding: 10px;
+    text-align: center;
+}
+
+.container-top{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.3rem;
+    align-items: stretch;
+    
+}
+.titulo-sessao{
+    color: black;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+}
+.menu a {
+    margin-right: 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(103, 103, 103);
+}
+
+.destaque {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+    transition: 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.destaque:hover{
+    transform: translateY(-0.3rem);
+}
+.destaque img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+.noticias-laterais{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+}
+.noticia-lateral:hover{
+    transform: translateY(-0.3rem);
+}
+.noticia-lateral{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 60vh;
+}
+
+.noticia-lateral img{
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+.noticia-lateral-conteudo{
+    padding: 1rem;
+}
+
+.conteudo {
+    width: 90%;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.titulo-secao{
+    width: 100%;
+}
+
+.grid-noticias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    
+}
+
+.noticia {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0.2rem 0.6rem rgba(0,0,0,.15);
+    transition: 0.3s;
+    height: 70vh;
+}
+
+.noticia:hover {
+    transform: translateY(-0.3rem);
+}
+
+.noticia img {
+    width: 100%;
+    height: 50%;
+}
+
+.noticia h2,
+.noticia p {
+    padding: 0 1rem;
+}
+
+.rodape {
+    margin-top: 30px;
+    background-color: rgb(150, 0, 0);
+    padding: 20px;
+    text-align: center;
+}
+/* 
+
+@media (max-width: 768px){
+    .topo, .rodape{
+        width: 100%;
+    }
+    .container-top{
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+
+    .noticia-lateral{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .noticia-lateral img{
+        width: 100%;
+        height: 12rem;
+    }
+
+    .grid-noticias{
+        grid-template-columns: 1fr;
+    }
+
+    .menu{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .menu a{
+        margin-right: 0;
+        padding: 5px 10px;
+    }
+} */
+@media (max-width: 768px) {
+    .topo {
+        padding: 15px 5px !important; /* Ajusta o espaçamento no mobile */
+    }
+    
+    .menu {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; /* Faz os links quebrarem de linha bonitinho se não couberem */
+        gap: 8px;
+        width: 100%;
+    }
+    /* 1. Reduz o espaçamento geral nas bordas do site para o conteúdo respirar */
+    .conteudo {
+        width: 92%; /* Deixa uma margem menor nas laterais da tela do celular */
+    }
+
+    /* 2. Diminui o contêiner do grid principal */
+    .container-top {
+        grid-template-columns: 1fr !important;
+        gap: 1rem; /* Diminuiu o espaço entre as notícias */
+    }
+
+    /* 3. Ajusta o título principal "Destaque da Semana" */
+    .titulo-sessao {
+        font-size: 1.4rem !important; /* Texto menor e mais delicado */
+        margin-top: 1rem !important;
+        margin-bottom: 0.2rem !important;
+    }
+
+    /* 4. Encolhe o card de destaque do Neymar */
+    .destaque {
+        padding: 1rem !important; /* Menos espaço em branco dentro do card */
+    }
+
+    .destaque h2 {
+        font-size: 1.3rem !important; /* Reduz o tamanho do título da notícia */
+        line-height: 1.6rem;
+        margin-top: 0.8rem;
+    }
+
+    .destaque p {
+        font-size: 0.9rem !important; /* Reduz o texto da descrição */
+        line-height: 1.3rem;
+    }
+
+    /* 5. Ajusta o bloco das notícias laterais secundárias */
+    .noticias-laterais {
+        gap: 1rem;
+    }
+
+    .noticia-lateral {
+        flex-direction: column !important;
+        padding: 1rem !important;
+    }
+
+    /* Ajusta as imagens das notícias menores para não dominarem a tela */
+    .noticia-lateral img {
+        width: 100% !important;
+        height: 140px !important; /* Reduzido de 180px para 140px */
+        object-fit: cover;
+    }
+
+    .noticia-lateral h2 {
+        font-size: 1.1rem !important; /* Título menor para as notícias de baixo */
+        margin-top: 0.5rem;
+    }
+
+    .noticia-lateral p {
+        font-size: 0.85rem !important; /* Texto menor para a descrição de baixo */
+    }
+
+    /* 6. Encolhe os links do menu para caberem sem cortar nas bordas */
+    .menu {
+        gap: 6px;
+    }
+    
+    .menu a {
+        font-size: 0.8rem !important; /* Letras do menu menores */
+    }
+}
